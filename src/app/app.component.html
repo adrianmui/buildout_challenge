@@ -1,3 +1,24 @@
-<h1>
-  {{title}}
-</h1>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                <a class="mdl-navigation__link" href=""> Brokers </a>
+
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">{{ title }}</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href=""> Brokers </a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <app-brokers></app-brokers>
+        </div>
+    </main>
+</div>
