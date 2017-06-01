@@ -1,9 +1,12 @@
 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Welcome</h2>
+        <h4>{{ property.address }}, </h4><span>{{ property.zip }} </span>
     </div>
+    <small>
+      {{ property.submarket }}
+    </small>
     <div class="mdl-card__supporting-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...
+        {{ property.location_description }}
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">

@@ -15,6 +15,10 @@ links = [
     {
       name: 'properties',
       route: '/properties'
+    },
+    {
+      name: 'spaces',
+      route: '/spaces'
     }
   ];
 

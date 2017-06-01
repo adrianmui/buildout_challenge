@@ -6,13 +6,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { BrokersComponent } from './brokers/';
-import { BrokersListComponent } from './brokers/brokers-list/';
-
 import { BrokerService } from './shared/';
 import { PropertyService } from './shared/';
+
+
+import { BrokersComponent } from './brokers/';
+import { BrokersListComponent } from './brokers/brokers-list/';
 import { PropertiesComponent } from './properties/';
-import { PropertiesListComponent } from './properties/properties-list/properties-list.component';
+import { PropertiesListComponent } from './properties/properties-list/';
+import { SpacesComponent } from './spaces/';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PropertiesListComponent } from './properties/properties-list/properties
     BrokersComponent,
     BrokersListComponent,
     PropertiesComponent,
-    PropertiesListComponent
+    PropertiesListComponent,
+    SpacesComponent
   ],
   imports: [
     BrowserModule,

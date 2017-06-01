@@ -1,4 +1,15 @@
-# Buildout
+# Buildout Code Challenge
+
+## By Adrian Mui
+
+Express API:
+
+http://buildoutapi.us-west-2.elasticbeanstalk.com/
+
+Angular 2:
+
+Routing so that Brokers -> Properties -> Spaces and Descriptions.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
