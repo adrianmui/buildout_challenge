@@ -16,7 +16,6 @@ export class BrokersListComponent implements OnInit {
     console.log(this.constructor.name);
   }
 
-
   routeToBrokerProperties(broker_id) {
     this.router.navigate(['/brokers', broker_id, 'properties'], );
   }

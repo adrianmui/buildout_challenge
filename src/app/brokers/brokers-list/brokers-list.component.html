@@ -1,9 +1,9 @@
 <div class="demo-card-image mdl-card mdl-shadow--2dp" [style.background-image]="'url(' + broker.profile_photo_url + ')'">
     <div class="mdl-card__title mdl-card--expand"></div>
     <div class="mdl-card__actions">
-        <span class="demo-card-image__filename">{{ broker.first_name }} {{ broker.last_name }} : {{ broker.job_title }}</span>
+        <div class="demo-card-image__filename" (click)="routeToBrokerProperties(broker.id)">{{ broker.first_name }} {{ broker.last_name }} : {{ broker.job_title }}</div>
     </div>
-    <button class="mdl-button" (click)="routeToBrokerProperties(broker.id)"> Click </button>
+
 </div>
 
 <!--<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
