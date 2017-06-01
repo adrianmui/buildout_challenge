@@ -1,25 +1,32 @@
-import { BrokersService } from './shared/brokers.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { BrokersComponent } from './brokers/brokers.component';
-import { BrokersListComponent } from './brokers/brokers-list/brokers-list.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { BrokersComponent } from './brokers/';
+import { BrokersListComponent } from './brokers/brokers-list/';
+
+import { BrokerService } from './shared/';
+import { PropertyService } from './shared/';
+import { PropertiesComponent } from './properties/';
 
 @NgModule({
   declarations: [
     AppComponent,
     BrokersComponent,
-    BrokersListComponent
+    BrokersListComponent,
+    PropertiesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
-  providers: [ BrokersService],
-  bootstrap: [AppComponent]
+  providers: [ BrokerService, PropertyService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

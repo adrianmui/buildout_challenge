@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Buildout';
+links = [
+    {
+      name: 'brokers',
+      route: '/brokers'
+    },
+    {
+      name: 'properties',
+      route: '/properties'
+    }
+  ];
+
+
+
 }
