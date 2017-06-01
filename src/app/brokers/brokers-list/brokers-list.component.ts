@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Broker } from './../../shared';
@@ -11,11 +12,17 @@ export class BrokersListComponent implements OnInit {
 
   @Input() broker: Broker;
 
-  constructor() {
+  constructor(private router: Router) {
     console.log(this.constructor.name);
   }
 
+
+  routeToBrokerProperties(broker_id) {
+    this.router.navigate(['/brokers', broker_id, 'properties'], );
+  }
+
   ngOnInit() {
+
   }
 
 

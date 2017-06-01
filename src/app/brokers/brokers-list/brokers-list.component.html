@@ -3,6 +3,7 @@
     <div class="mdl-card__actions">
         <span class="demo-card-image__filename">{{ broker.first_name }} {{ broker.last_name }} : {{ broker.job_title }}</span>
     </div>
+    <button class="mdl-button" (click)="routeToBrokerProperties(broker.id)"> Click </button>
 </div>
 
 <!--<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">

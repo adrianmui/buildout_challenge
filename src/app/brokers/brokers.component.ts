@@ -1,4 +1,4 @@
-import { Broker } from '../shared/broker.model';
+import { Broker } from '../shared/';
 import { BrokerService } from '../shared/';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,12 +11,12 @@ export class BrokersComponent implements OnInit {
 
   brokers: Broker[];
 
-  constructor(private BrokerService: BrokerService) {
+  constructor(private brokerService: BrokerService) {
     console.log(this.constructor.name);
   }
 
   ngOnInit() {
-    this.BrokerService.loadBrokers()
+    this.brokerService.loadBrokers()
       .subscribe(brokers => this.brokers = brokers);
   }
 }
