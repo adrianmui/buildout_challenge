@@ -6,12 +6,16 @@
         "ng": "ng",
         "serve": "ng serve",
         "start": "node server.js",
-        // "start": "ng serve",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "postinstall": "ng build --aot -prod"
+        "postinstall": "ng build --aot -prod",
+        "deploy": "git push heroku master"
+    },
+    "engines": {
+        "node": "6.9.1",
+        "npm": "4.6.1"
     },
     "private": true,
     "dependencies": {
