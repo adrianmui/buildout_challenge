@@ -15,6 +15,7 @@ import { BrokersListComponent } from './brokers/brokers-list/';
 import { PropertiesComponent } from './properties/';
 import { PropertiesListComponent } from './properties/properties-list/';
 import { SpacesComponent } from './spaces/';
+import { PhotosComponent } from './shared/photos/';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SpacesComponent } from './spaces/';
     BrokersListComponent,
     PropertiesComponent,
     PropertiesListComponent,
-    SpacesComponent
+    SpacesComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,

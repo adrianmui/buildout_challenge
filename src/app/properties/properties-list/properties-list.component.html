@@ -1,17 +1,17 @@
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-    <div class="mdl-card__title">
-        <h4>{{ property.address }}, </h4><span>{{ property.zip }} </span>
+<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+    <div class="mdl-card__title text-w">
+        <h2 class="mdl-card__title-text text-w">{{ property.address }}, {{ property.submarket || 'N/A' }}</h2>
     </div>
-    <small>
-      {{ property.submarket }}
-    </small>
+    <app-photos [photos]="property.photos"></app-photos>
     <div class="mdl-card__supporting-text">
-        {{ property.location_description }}
+        <p class="text-w">
+            {{ property.location_description }}
+        </p>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+          See Property
+      </button>
     </div>
     <div class="mdl-card__menu">
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">

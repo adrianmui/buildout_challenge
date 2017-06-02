@@ -1,7 +1,12 @@
 .mdl-card {
-    width: 400px;
-    height: 300px;
-    margin: 5px;
+    width: auto;
+    height: auto;
+    margin: 2% 20% 0% 20%;
+    background-color: #EEEEEE;
+}
+
+.text-w {
+    color: black;
 }
 
 .demo-card-image>.mdl-card__actions {
