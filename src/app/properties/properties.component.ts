@@ -1,5 +1,4 @@
 import { Router, ActivatedRoute } from '@angular/router';
-import { AfterViewInit } from '@angular/core/core';
 import { PropertyService } from '../shared/';
 import { Component, OnInit } from '@angular/core';
 import * as  _ from 'underscore';
@@ -9,7 +8,7 @@ import * as  _ from 'underscore';
   templateUrl: './properties.component.html',
   styleUrls: ['./properties.component.css']
 })
-export class PropertiesComponent implements OnInit, AfterViewInit {
+export class PropertiesComponent implements OnInit {
 
   broker_id: number;
   properties: any;
@@ -26,14 +25,17 @@ export class PropertiesComponent implements OnInit, AfterViewInit {
     this.propertyService.loadProperties()
     .subscribe(properties => {
       if (this.broker_id) {
-        this.properties = _.where(properties, {broker_id: this.broker_id });
+        console.log(this.broker_id);
+        this.properties = _.filter(properties, (property) => {
+          // tslint:disable-next-line:max-line-length
+          // tslint:disable-next-line:radix
+          /** doesn't work without coercion */
+          return parseInt(property.broker_id) == this.broker_id || parseInt(property.second_broker_id) == this.broker_id || parseInt(property.third_broker_id) == this.broker_id;
+        });
+      } else {
+        console.log('lol');
+        this.properties = properties;
       }
-      this.properties = properties;
     });
   }
-
-  ngAfterViewInit() {
-
-  }
-
 }
