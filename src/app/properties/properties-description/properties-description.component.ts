@@ -1,6 +1,7 @@
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
 import { PropertyService } from '../../shared/';
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { _ } from 'underscore';
 
 @Component({
   selector: 'app-properties-description',
@@ -10,6 +11,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 export class PropertiesDescriptionComponent implements OnInit {
   property_id: number;
   property: any;
+  property_attributes: Array<any>;
 
   constructor( private router: Router,
                private route: ActivatedRoute,
@@ -33,8 +35,21 @@ export class PropertiesDescriptionComponent implements OnInit {
   }
 
   ngOnInit() {
+    // should be passing expressions, not side effects
     this.property_id = this.route.snapshot.params['id'];
     this.propertyService.getProperty(this.property_id)
-      .subscribe(property => this.property = property);
+      .subscribe(property =>  {
+        this.property = property;
+        this.property_attributes = this.grabNumRandAttributes(10);
+      });
+  }
+
+  grabNumRandAttributes(num: number): Array<any> {
+    let temp = _.sample(Object.keys(this.property), num);
+    temp.forEach( (el, index) => {
+      temp[index] = { name: el, val: this.property[el] || 'n/a' };
+    });
+    console.log(temp);
+    return temp;
   }
 }
