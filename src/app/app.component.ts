@@ -10,14 +10,17 @@ export class AppComponent {
 links = [
     {
       name: 'brokers',
+      m_icon: 'person_pin',
       route: '/brokers'
     },
     {
       name: 'properties',
+      m_icon: 'business',
       route: '/properties'
     },
     {
       name: 'spaces',
+      m_icon: 'store',
       route: '/spaces'
     }
   ];

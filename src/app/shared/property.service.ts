@@ -19,4 +19,9 @@ export class PropertyService {
       .map(res => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
    }
+
+   getProperty(property_id: number): Observable<Response> {
+     return this.http.get(`${BASE_URL}/${property_id}`) .map(res => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+   }
 }

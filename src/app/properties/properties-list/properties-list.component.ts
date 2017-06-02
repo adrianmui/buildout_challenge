@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,9 +11,15 @@ export class PropertiesListComponent implements OnInit {
 
   @Input() property;
 
-  constructor() { }
+  constructor(private router: Router) {
+    console.log(this.constructor.name);
+   }
 
   ngOnInit() {
+  }
+
+  routeToPropertyDetails(property_id) {
+    this.router.navigate(['/properties', property_id, 'description']);
   }
 
 }

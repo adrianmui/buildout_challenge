@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrokersComponent } from './brokers/';
 import { PropertiesComponent } from './properties/';
+import { PropertiesDescriptionComponent } from './properties/properties-description/';
 import { SpacesComponent } from './spaces/';
 
 
@@ -27,7 +28,24 @@ const routes: Routes = [
 
   {
     path: 'properties',
-    component: PropertiesComponent
+    component: PropertiesComponent,
+    children: [
+      {
+        path: '',
+        component: PropertiesComponent
+      },
+      {
+        path: ':id',
+        children: [
+          {
+          path: 'description',
+          component: PropertiesDescriptionComponent
+          }
+        ]
+
+      }
+    ]
+
   },
 
   {

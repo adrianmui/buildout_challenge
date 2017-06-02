@@ -1,5 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AfterViewInit } from '@angular/core/core';
 import { PropertyService } from '../shared/';
 import { Component, OnInit } from '@angular/core';
@@ -13,17 +12,17 @@ import * as  _ from 'underscore';
 export class PropertiesComponent implements OnInit, AfterViewInit {
 
   broker_id: number;
-  properties;
+  properties: any;
 
   constructor(private propertyService: PropertyService, private router: Router, private route: ActivatedRoute) {
     console.log(this.constructor.name);
   }
 
   ngOnInit() {
+    // grab broker id from params if accessed through broker
     this.broker_id = this.route.snapshot.params['id'];
-  }
 
-  ngAfterViewInit() {
+    // load property data filtered by broker or getall
     this.propertyService.loadProperties()
     .subscribe(properties => {
       if (this.broker_id) {
@@ -31,6 +30,10 @@ export class PropertiesComponent implements OnInit, AfterViewInit {
       }
       this.properties = properties;
     });
+  }
+
+  ngAfterViewInit() {
+
   }
 
 }

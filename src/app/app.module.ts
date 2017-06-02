@@ -16,6 +16,7 @@ import { PropertiesComponent } from './properties/';
 import { PropertiesListComponent } from './properties/properties-list/';
 import { SpacesComponent } from './spaces/';
 import { PhotosComponent } from './shared/photos/';
+import { PropertiesDescriptionComponent } from './properties/properties-description/';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PhotosComponent } from './shared/photos/';
     PropertiesComponent,
     PropertiesListComponent,
     SpacesComponent,
-    PhotosComponent
+    PhotosComponent,
+    PropertiesDescriptionComponent
   ],
   imports: [
     BrowserModule,
