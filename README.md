@@ -6,19 +6,17 @@
 
 http://buildoutapi.us-west-2.elasticbeanstalk.com/
 
-### To do:
+Angular 2 with Express Server:
 
-* Alter properties response so that brokers_1, brokers_2, and brokers_3 is a single array property brokers:[id_1, id_2, id_3].
+http://infinite-fortress-95462.herokuapp.com/ 
 
-Angular 2:
+### If I had more time:
 
-http://infinite-fortress-95462.herokuapp.com/ (not done)
-
-### To do:
-
-* Routing so that Brokers -> Properties -> Spaces and Descriptions.
+* Update my express api so that broker_id, second_broker_id, and third_broker_id would be under brokers: [ 9015, 9016, 9017]
 
 * Pretty much everything in the UI/UX department. lol.
+
+* Wrote this pretty much on little sleep and probably had some inconsistencies.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
