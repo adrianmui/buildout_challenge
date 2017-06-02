@@ -45,11 +45,21 @@ export class PropertiesDescriptionComponent implements OnInit {
   }
 
   grabNumRandAttributes(num: number): Array<any> {
-    let temp = _.sample(Object.keys(this.property), num);
-    temp.forEach( (el, index) => {
-      temp[index] = { name: el, val: this.property[el] || 'n/a' };
+    let attributes = _.sample(Object.keys(this.property), num);
+    attributes.forEach( (el, index) => {
+      attributes[index] = { name: el, val: this.reduceVal(this.property[el]) || 'n/a' };
     });
-    console.log(temp);
-    return temp;
+    return attributes;
+  }
+
+  reduceVal(input: any): string {
+    if (typeof input === 'string') {
+      return input.slice(0, 5);
+    }
+    else if(typeof input === 'number') {
+      return input.toString();
+    } else {
+      return 'alot'
+    }
   }
 }
