@@ -2,6 +2,12 @@
 
 ## By Adrian Mui
 
+```
+  if you want to run this locally you pretty much need access to buildout's api via my repo, buildout_api. you'll also need the key, which doesn't belong to me... 
+  then run scripts, check package.json.. probably npm start
+  the FE app is served on localhost:8080 or 8081 and calls my eb express layer... if it's not working then it probably means I haven't payed my aws bills.
+```
+
 ### Express API:
 
 http://buildoutapi.us-west-2.elasticbeanstalk.com/
